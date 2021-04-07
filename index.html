@@ -1,55 +1,106 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>To-do List</title>
-<link href="https://fonts.googleapis.com/css?family=Hind:400,500,600&amp;subset=latin-ext" rel="stylesheet">
-<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <main class="app">
-    <nav class="nav">
-      <a class="nav__item all active">All</a>
-      <a class="nav__item now">Active</a>
-      <a class="nav__item complete">Complete</a>
-    </nav>
-    <div class="add">
-      <div class="add__priority">
-        <label class="add__radio" title="Priority 0">
-          <input checked type="radio" value=0 name="priority">
-          <span class="add__circle"></span>
-        </label>
-        <label class="add__radio add__radio--1" title="Priority 1">
-          <input type="radio" value=1 name="priority">
-          <span class="add__circle"></span>
-        </label>
-        <label class="add__radio add__radio--2" title="Priority 2">
-          <input type="radio" value=2 name="priority">
-          <span class="add__circle"></span>
-        </label>
-        <label class="add__radio add__radio--3" title="Priority 3">
-          <input type="radio" value=3 name="priority">
-          <span class="add__circle"></span>
-        </label>
+  <head>
+    <title>To-do List</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Hind:400,500,600&amp;subset=latin-ext"
+      rel="stylesheet"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+      integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <nav class="nav">
+        <a class="nav__item all active">All</a>
+        <a class="nav__item now">Active</a>
+        <a class="nav__item complete">Complete</a>
+      </nav>
+      <div class="add">
+        <div class="add__priority">
+          <label class="add__radio" title="Priority 0">
+            <input checked type="radio" value="0" name="priority" />
+            <span class="add__circle"></span>
+          </label>
+          <label class="add__radio add__radio--1" title="Priority 1">
+            <input type="radio" value="1" name="priority" />
+            <span class="add__circle"></span>
+          </label>
+          <label class="add__radio add__radio--2" title="Priority 2">
+            <input type="radio" value="2" name="priority" />
+            <span class="add__circle"></span>
+          </label>
+          <label class="add__radio add__radio--3" title="Priority 3">
+            <input type="radio" value="3" name="priority" />
+            <span class="add__circle"></span>
+          </label>
+        </div>
+        <div>
+          <input
+            placeholder="+ Add todo item"
+            type="text"
+            class="add__input content"
+          />
+          <button
+            class="add new"
+            style="
+              display: inline-block;
+              float: right;
+              margin-top: 5px;
+              color: #00b9a0;
+            "
+          >
+            Add
+          </button>
+        </div>
       </div>
-      <div>
-      <input placeholder="+ Add todo item" type="text" class="add__input content">
-      <button class="add new" style="display:inline-block; float:right; margin-top:5px; color: #00b9a0;">Add</button>
-      </div>
-    </div>
-    <ul class="list">
-      <li class="item">
-        <label class="item__checkbox item__checkbox--3"><input type="checkbox"><i class="fas fa-check"></i></label>Lorem ipsum dolor sit<button class="item__delete"><i class="fas fa-trash-alt"></i></button></li>
-      <li class="item done">
-        <label class="item__checkbox item__checkbox--2"><input checked type="checkbox"><i class="fas fa-check"></i></label>Amet consectetur adipisicing elit andae magni molestiae magni<button class="item__delete"><i class="fas fa-trash-alt"></i></button></li>
-      <li class="item">
-        <label class="item__checkbox item__checkbox--1"><input type="checkbox"><i class="fas fa-check"></i></label>Andae magni molestiae<button class="item__delete"><i class="fas fa-trash-alt"></i></button></li>
-      <li class="item">
-        <label class="item__checkbox"><input type="checkbox"><i class="fas fa-check"></i></label><span class="item__priority"></span>Possimus nam<button class="item__delete"><i class="fas fa-trash-alt"></i></button>
-      </li>
-    </ul>
-  </main>
-  <script src="function.js"></script>
-</body>
+      <ul class="list">
+        <li class="item">
+          <label class="item__checkbox item__checkbox--3"
+            ><input type="checkbox" /><i class="fas fa-check"></i></label
+          >Lorem ipsum dolor sit<button class="item__delete">
+            <i class="fas fa-trash-alt"></i>
+          </button>
+        </li>
+        <li class="item done">
+          <label class="item__checkbox item__checkbox--2"
+            ><input checked type="checkbox" /><i
+              class="fas fa-check"
+            ></i></label
+          >Amet consectetur adipisicing elit andae magni molestiae magni<button
+            class="item__delete"
+          >
+            <i class="fas fa-trash-alt"></i>
+          </button>
+        </li>
+        <li class="item">
+          <label class="item__checkbox item__checkbox--1"
+            ><input type="checkbox" /><i class="fas fa-check"></i></label
+          >Andae magni molestiae<button class="item__delete">
+            <i class="fas fa-trash-alt"></i>
+          </button>
+        </li>
+        <li class="item">
+          <label class="item__checkbox"
+            ><input type="checkbox" /><i class="fas fa-check"></i></label
+          ><span class="item__priority"></span>Possimus nam<button
+            class="item__delete"
+          >
+            <i class="fas fa-trash-alt"></i>
+          </button>
+        </li>
+      </ul>
+    </main>
+    <script src="function.js"></script>
+  </body>
 </html>
